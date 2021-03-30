@@ -12,12 +12,18 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Poster shop
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>Version du site : {{version}}</div>
       </q-toolbar>
     </q-header>
+
+    <q-footer elevated>
+        <q-toolbar>
+          <div>© 2021 - Poster shop</div>
+        </q-toolbar>
+      </q-footer>
 
     <q-drawer
       v-model="leftDrawerOpen"
@@ -30,7 +36,7 @@
           header
           class="text-grey-8"
         >
-          Essential Links
+          Liens importants
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -47,6 +53,7 @@
 </template>
 
 <script>
+import { version } from '../../package.json'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksData = [
@@ -58,39 +65,15 @@ const linksData = [
   },
   {
     title: 'Github',
-    caption: 'github.com/quasarframework',
+    caption: 'github.com/projet-scrum',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: 'https://github.com/Legoota/Projet-scrum'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    title: 'Trello',
+    caption: 'trello.com/projet-scrum',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'https://trello.com/b/uzni5nVf/projet-scrum'
   }
 ]
 
@@ -100,7 +83,8 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
-      essentialLinks: linksData
+      essentialLinks: linksData,
+      version: version
     }
   }
 }
