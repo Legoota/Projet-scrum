@@ -12,7 +12,12 @@
         />
 
         <q-toolbar-title>
-          Poster shop
+          <span class="titre" @click="$router.replace('/')">Poster Shop</span>
+          <q-btn-group push class="nav-menu">
+            <q-btn color="black" @click="$router.replace('/shop')" push label="Catalogue" icon="local_grocery_store" />
+            <q-btn color="black" @click="$router.replace('/contact')" push label="Contact" icon="mail" />
+            <q-btn color="black" @click="$router.replace('/about')" push label="A propos" icon="visibility" />
+          </q-btn-group>
         </q-toolbar-title>
 
         <div>Version du site : {{version}}</div>
@@ -51,6 +56,15 @@
     </q-page-container>
   </q-layout>
 </template>
+
+<style scoped>
+  .titre {
+    cursor: pointer;
+  }
+  .nav-menu {
+    margin-left:1em;
+  }
+</style>
 
 <script>
 import { version } from '../../package.json'
