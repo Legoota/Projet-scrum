@@ -14,9 +14,9 @@
         <q-toolbar-title>
           <span class="titre" @click="$router.replace('/')">Poster Shop</span>
           <q-btn-group push class="nav-menu">
-            <q-btn color="black" @click="$router.replace('/shop')" push label="Catalogue" icon="local_grocery_store" />
-            <q-btn color="black" @click="$router.replace('/contact')" push label="Contact" icon="mail" />
-            <q-btn color="black" @click="$router.replace('/about')" push label="A propos" icon="visibility" />
+            <q-btn outline color="white" @click="$router.replace('/shop')" push label="Catalogue" icon="local_grocery_store" />
+            <q-btn outline color="white" @click="$router.replace('/contact')" push label="Contact" icon="mail" />
+            <q-btn outline color="white" @click="$router.replace('/about')" push label="A propos" icon="visibility" />
           </q-btn-group>
         </q-toolbar-title>
 

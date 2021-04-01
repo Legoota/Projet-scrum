@@ -19,7 +19,7 @@
             v-model="text"
             filled
             type="textarea"/>
-          <q-btn @click="sendMessage" color="primary" icon-right="send" label="Envoyer" />
+          <q-btn :disable="!nom || !prenom || !email || !text" @click="sendMessage" color="primary" icon-right="send" label="Envoyer" />
       </div>
     </div>
       </div>
