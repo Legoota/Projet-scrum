@@ -37,3 +37,6 @@ yarn-error.log*
 
 # Yarn files
 yarn.lock
+
+# npm files
+package-lock.json
