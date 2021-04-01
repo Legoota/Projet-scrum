@@ -26,16 +26,22 @@ Des marques exclusives et probablement la plus grande sélection de motifs pour 
         <div class="q-pa-md">
           <q-carousel
             animated
+            height="250"
             v-model="slide"
             arrows
             navigation
             infinite
-            autoplay="true"
+            :autoplay="true"
           >
             <q-carousel-slide :name="1" img-src="~assets/images/poster-citron.jpg" />
             <q-carousel-slide :name="2" img-src="~assets/images/poster-lac.jpg" />
             <q-carousel-slide :name="3" img-src="~assets/images/poster-vase.jpg" />
-            <q-carousel-slide :name="4" img-src="~assets/images/poster-planete.jpg" />
+            <q-carousel-slide :name="5" img-src="~assets/images/poster-lasvegas.jpg" />
+            <q-carousel-slide :name="6" img-src="~assets/images/poster-matisse.jpg" />
+            <q-carousel-slide :name="7" img-src="~assets/images/poster-noodles.jpg" />
+            <q-carousel-slide :name="8" img-src="~assets/images/poster-planete.jpg" />
+            <q-carousel-slide :name="9" img-src="~assets/images/poster-pont.jpg" />
+            <q-carousel-slide :name="4" img-src="~assets/images/poster-vase.jpg" />
           </q-carousel>
         </div>
         <div class="row justify-center">
