@@ -73,7 +73,6 @@ export default {
   methods: {
     selectChange (nom) {
       this.selected = catalog.filter(p => p.title === nom)[0]
-      console.log('Changement: ' + this.selected.title)
       this.card = true
     }
   }
