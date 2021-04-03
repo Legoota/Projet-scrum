@@ -11,7 +11,7 @@
       <div class="col-1"></div>
       <div class="col-4">
         <p>Chez Poster Shop vous trouverez des posters inspirés du design Nancéen, créés avec amour et passion par des artistes originaires du monde entier. Nous proposons aussi des cadres photo de haute qualité, faciles à ouvrir et à accrocher au mur. Poster Shop est une entreprise basée à Nancy.</p>
-        <p>Chez Poster Store, nous sommes ravis de voir le rendu de nos posters sur vos murs! Taguez nous sur une photo Instagram avec #postershop ou @postershop ou envoyez nous une photo à info@postershop.fr. Nous sommes toujours à la recherche d'images inspirantes pour notre blog et notre site!</p>
+        <p>Chez Poster Shop, nous sommes ravis de voir le rendu de nos posters sur vos murs! Taguez nous sur une photo Instagram avec #postershop ou @postershop ou envoyez nous une photo à info@postershop.fr. Nous sommes toujours à la recherche d'images inspirantes pour notre blog et notre site!</p>
       </div>
       <div class="col-2"></div>
       <div class="col-4">

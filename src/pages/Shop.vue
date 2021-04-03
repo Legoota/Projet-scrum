@@ -43,9 +43,30 @@
         </q-card-section>
 
         <q-separator />
+        <br/>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col">
+            <q-select
+              filled
+              v-model="selectedType"
+              :options="type"
+              label="Choisir"
+            />
+          </div>
+          <div class="col-1"></div>
+        </div>
+        <br/>
+        <q-separator />
+
+        <q-card-actions align="left">
+          <span v-if="selectedType === 'Poster'">Prix total : {{selected.prix}}€</span>
+          <span v-else-if="selectedType === 'Tableau'">Prix total : {{selected.prix*1.5}}€</span>
+          <span v-else>Choisissez une finition pour calculer le prix</span>
+        </q-card-actions>
 
         <q-card-actions align="right">
-          <q-btn v-close-popup flat color="primary" label="Ajouter au panier" />
+          <q-btn :disable="selectedType" @click="sendMessage" v-close-popup flat color="primary" label="Ajouter au panier" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -61,19 +82,33 @@
 
 <script>
 import { catalog } from '../assets/catalog'
+const types = ['Poster', 'Tableau']
 export default {
   name: 'PageShop',
   data () {
     return {
       card: false,
       selected: {},
-      catalog: catalog
+      catalog: catalog,
+      type: types,
+      selectedType: ''
     }
+  },
+  mounted () {
+    this.prixMax = Math.max.apply(Math, this.catalog.map(function (o) { return o.prix }))
+    this.max = this.prixMax
   },
   methods: {
     selectChange (nom) {
       this.selected = catalog.filter(p => p.title === nom)[0]
+      this.selectedType = ''
       this.card = true
+    },
+    sendMessage () {
+      this.$q.notify({
+        message: 'Article ajouté au panier !',
+        color: 'positive'
+      })
     }
   }
 }
