@@ -14,7 +14,7 @@
 
             <q-card-actions>
               <q-btn flat @click="selectChange(poster.title)">Voir plus</q-btn>
-              <q-btn flat round color="primary" icon="share" />
+              <q-btn flat round color="primary" @click="sendMessageShared()" icon="share" />
             </q-card-actions>
           </q-card>
         </div>
@@ -108,6 +108,12 @@ export default {
       this.$q.notify({
         message: 'Article ajouté au panier !',
         color: 'positive'
+      })
+    },
+    sendMessageShared () {
+      this.$q.notify({
+        message: 'Lien de partage copié !',
+        color: 'primary'
       })
     }
   }
