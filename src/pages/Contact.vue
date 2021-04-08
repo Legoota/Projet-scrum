@@ -46,6 +46,10 @@ export default {
         message: 'Message bien envoyé !',
         color: 'positive'
       })
+      this.nom = null
+      this.prenom = null
+      this.email = null
+      this.text = null
     }
   }
 }
