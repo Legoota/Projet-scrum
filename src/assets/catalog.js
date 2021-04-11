@@ -36,7 +36,7 @@ export const catalog = [
   },
   {
     title: 'Système solaire',
-    description: 'Voyagez daxns l\'espace et évadez vous quelques instants dans votre salon.',
+    description: 'Voyagez dans l\'espace et évadez vous quelques instants dans votre salon.',
     prix: 40,
     lien: 'https://www.postery.com/media/catalog/product/cache/c67bd17d6d67468e1f797392976ffba9/s/o/solar-system-poster-2.jpg',
     rating: 4
